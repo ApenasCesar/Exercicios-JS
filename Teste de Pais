@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Pais</title>
+    
+    <style>
+        body{
+            background: black;
+            color: white;
+        }
+        div{
+            font: normal 15pt sans-serif;
+        }
+        #pais{
+            font: normal 18pt sans-serif;
+
+        }
+    
+    </style>
+
+</head>
+<body>
+    <h1>Teste de Pais</h1>
+    
+    <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res">Resultado</div>
+    <script>
+        function verificar(){
+            var pais = document.querySelector('input#pais').value
+            var res = document.querySelector('div#res')
+
+            res.innerHTML = `Seu pais é: ${pais}`
+            
+            if (pais !== 'Brasil'){
+                res.innerHTML += '<br> Você é Gringo'
+            }
+            else{
+                res.innerHTML += '<br> você é Brasileiro!'
+            }
+
+            
+        }
+       
+        
+    </script>
+</body>
+</html>
