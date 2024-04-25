@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora nivel 1</title>
+    <style>
+        body{
+            font: normal 18pt sans-serif;
+        }
+        input{
+            font: normal 18pt sans-serif;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora nivel 1</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+
+    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <input type="button" value="mult" onclick="mult()">
+    <input type="button" value="dividir" onclick="div()">
+
+    <div id="res">Resultado</div>
+
+
+    <script>
+
+        function somar(){
+        var tn1 = document.getElementById('txtn1')
+        var tn2 = document.getElementById('txtn2')
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+
+        var s = n1 + n2
+        var res = document.getElementById('res')
+        
+        res.innerHTML = `O resultado é: ${s}`
+        res.style.background = 'blue'
+        res.style.color = 'white'
+    }
+    function subtrair(){
+        var tn1 = document.getElementById('txtn1')
+        var tn2 = document.getElementById('txtn2')
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+
+        var s = n1 - n2
+        var res = document.getElementById('res')
+        
+        res.innerHTML = `O resultado é: ${s}`
+        res.style.background = 'blue'
+        res.style.color = 'white'
+    }
+    function mult(){
+        var tn1 = document.getElementById('txtn1')
+        var tn2 = document.getElementById('txtn2')
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+
+        var s = n1 * n2
+        var res = document.getElementById('res')
+        
+        res.innerHTML = `O resultado é: ${s}`
+        res.style.background = 'blue'
+        res.style.color = 'white'
+    }
+    function div(){
+        var tn1 = document.getElementById('txtn1')
+        var tn2 = document.getElementById('txtn2')
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+
+        var s = n1 / n2
+        var res = document.getElementById('res')
+        
+        res.innerHTML = `O resultado é: ${s}`
+        res.style.background = 'blue'
+        res.style.color = 'white'
+    }
+
+
+
+    </script>
+</body>
+</html>
