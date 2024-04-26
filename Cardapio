@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cardapio</title>
+    <style>
+        body{
+            background: rgb(255,228,196);
+            font: normal 15pt sans-serif;
+        }
+        #codigo{
+            margin-bottom: 5px;
+        }
+        div{
+            margin-top: 10px;
+        }
+        #resultado{
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cardapio</h1>
+    
+    <div>
+        <li>Codigo: 100 = Cachorro quente: Preço = 1.20</li>
+        <li>Codigo: 101 = Bauru Simples: Preço = 1.30</li>
+        <li>Codigo: 102 = Bauru com Ovo: Preço = 1.50</li>
+        <li>Codigo: 103 = Hamburguer: Preço = 1.20</li>
+        <li>Codigo: 104 = Cheeseburguer: Preço = 1.70</li>
+        <li>Codigo: 105 = Suco: Preço = 2.20</li>
+        <li>Codigo: 106 = Refrigerante: Preço = 1.00</li>
+    </div> <br>
+    
+    
+    
+    
+    Digite o codigo do pedido: <input type="number" name="codigo" id="codigo"><br>
+    Digite a quantidade do pedido: <input type="number" name="quantidade" id="quantidade">
+    <input type="button" value="Resultado" id="resultado" onclick="resultado()">
+
+    <div id="res">Resultado:<br></div>
+    <div id="total">Total a pagar:</div>
+
+    <script>
+
+        function resultado(){
+
+            var pedido = document.getElementById('codigo')
+            var quant = document.getElementById('quantidade')
+            var res = document.getElementById('res')
+            var total = document.getElementById('total')
+
+            var codigo = Number(pedido.value)
+            var quantidade = Number(quant.value)
+
+            var ped1 = 100
+            var ped2 = 101
+            var ped3 = 102
+            var ped4 = 103
+            var ped5 = 104
+            var ped6 = 105
+            var ped7 = 106
+            
+            var preco1 = 1.20
+            var preco2 = 1.30
+            var preco3 = 1.50
+            var preco4 = 1.20
+            var preco5 = 1.70
+            var preco6 = 20.20
+            var preco7 = 1.00
+
+            var conta1 = quantidade * preco1
+            var conta2 = quantidade * preco2
+            var conta3 = quantidade * preco3
+            var conta4 = quantidade * preco4
+            var conta5 = quantidade * preco5
+            var conta6 = quantidade * preco6
+            var conta7 = quantidade * preco7
+
+            if (codigo == ped1){
+                res.innerHTML += `Seu pedido ficou: ${conta1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else if (codigo == ped2){
+                res.innerHTML += `Seu pedido ficou: ${conta2.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else if (codigo == ped3){
+                res.innerHTML += `Seu pedido ficou: ${conta3.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else if (codigo == ped4){
+                res.innerHTML += `Seu pedido ficou: ${conta4.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else if (codigo == ped5){
+                res.innerHTML += `Seu pedido ficou: ${conta5.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else if (codigo == ped6){
+                res.innerHTML += `Seu pedido ficou: ${conta6.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else if (codigo == ped7){
+                res.innerHTML += `Seu pedido ficou: ${conta7.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}<br>`
+            }
+            else{
+                res.innerHTML += `Digite um código valido<br>`
+            }
+        }
+    </script>
+</body>
+</html>
