@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangulo</title>
+    <style>
+        body{
+            background: rgb(240,248,255);
+            font: normal 15pt sans-serif;
+        }
+        input{
+            width: 200px;
+            margin-top: 20px;
+            font: normal 10pt sans-serif;
+        }
+        #verificar{
+            width: 205px;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Teste do Triangulo</h1>
+    
+    <input type="number" name="lado1" id="lado1"><br>
+    <input type="number" name="lado2" id="lado2"><br>
+    <input type="number" name="lado3" id="lado3"><br>
+    <input type="button" value="verificar" id="verificar" onclick="verificar()">
+
+    <div id="res">Resultado:</div>
+
+    <script>
+        
+        function verificar(){
+           
+            var lado1 = document.getElementById('lado1')
+            var lado2 = document.getElementById('lado2')
+            var lado3 = document.getElementById('lado3')
+
+            var n1 = Number(lado1.value)
+            var n2 = Number(lado2.value)
+            var n3 = Number(lado3.value)
+
+            var res = document.getElementById('res')
+
+
+            if (n1 == n2 && n2 == n3 && n1 == n3){
+                res.innerHTML += '<p>Seu triangulo é Equilátero</p>'
+            }
+            else if (n1 == n2 || n2 == n3 || n1 == n3){
+                res.innerHTML += '<p>Seu triangulo é Isósceles</p>'
+            }
+            else{
+                res.innerHTML += '<p>Seu triangulo é Escalenos</p>'
+            }
+        }
+    </script>
+</body>
+</html>
