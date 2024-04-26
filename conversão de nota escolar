@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertendo a nota</title>
+    <style>
+        body{
+            background: rgb(240,248,255);
+            font: normal 15pt sans-serif;
+        }
+        input{
+            width: 200px;
+            margin-top: 20px;
+            font: normal 10pt sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Digite a nota do aluno</h1>
+    
+    <input type="number" name="nota" id="nota">
+    <input type="button" value="Converter" onclick="converter()">
+
+    <div id="res">Resultado: <br></div>
+
+    <script>
+        function converter(){
+
+            var nota = document.getElementById('nota')
+            var notaC = Number(nota.value)
+            var res = document.getElementById('res')
+
+
+            if (notaC >= 86 && notaC <= 100){
+                res.innerHTML += 'Sua nota é: A<br>'
+            }
+            else if (notaC >= 61 && notaC <=85){
+                res.innerHTML += 'Sua nota é: B <br>'
+            }
+            else if (notaC >= 36 && notaC <= 60){
+                res.innerHTML += 'Sua nota é: C <br>'
+            }
+            else if (notaC >= 1 && notaC <= 35){
+                res.innerHTML += 'Sua nota é: D <br>'
+            }
+            else{
+                res.innerHTML += 'Sua nota é: E <br>'
+            }
+        }
+    </script>
+</body>
+</html>
